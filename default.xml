@@ -1,9 +1,23 @@
 <manifest>
-  <remote name="github" fetch="https://github.com/"/>
+  <remote name="mozilla" fetch="https://github.com/mozilla"/>
+  <remote name="mozilla-servo" fetch="https://github.com/mozilla-servo"/>
 
-  <default revision="master" remote="github" sync-j="4"/>
+  <default revision="master"/>
 
-  <project name="mozilla/servo" path="servo"/>
-  <project name="mozilla/rust" path="rust"/>
-  <project name="mozilla-servo/rust-cocoa" path="platform/macos/rust-cocoa"/>
+  <project name="servo"
+           remote="mozilla"
+           revision="master"/>
+
+  <project name="rust-azure"
+           remote="mozilla-servo"
+           path="support/rust-azure"
+           revision="606de29afbf2daf2b66db15853f5f617e6e74087"/>
+  <project name="skia"
+           remote="mozilla-servo"
+           path="support/skia"
+           revision="a30fd879f21f78672c41a519a60e590003e2caf1"/>
+  <project name="rust-layers"
+           remote="mozilla-servo"
+           path="support/rust-layers"
+           revision="10d40153462cf7248fcf35db5c18cf026cd25aea"/>
 </manifest>
